@@ -17,6 +17,6 @@ cypress/screenshots/
 .parcel-cache/
 .rpt2_cache/
 .ts-node-cache/
-
+.spyproject
 target/ 
 node_modules/
