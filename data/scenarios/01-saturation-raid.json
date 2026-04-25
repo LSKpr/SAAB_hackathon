@@ -1,0 +1,37 @@
+{
+  "name": "Saturation raid from north",
+  "durationMin": 30,
+  "spawns": [
+    {
+      "t": 2,
+      "id": "T01",
+      "class": "CM_SUBSONIC",
+      "fromKm": [200, 320],
+      "toKm": [1225, 1208],
+      "speedMps": 250,
+      "altitudeM": 50
+    },
+    {
+      "t": 3,
+      "id": "T02",
+      "class": "DRONE_SWARM",
+      "count": 12,
+      "fromKm": [400, 350],
+      "toKm": [600, 1100],
+      "speedMps": 35,
+      "altitudeM": 200
+    },
+    {
+      "t": 8,
+      "id": "T03",
+      "class": "FIGHTER_4GEN",
+      "fromKm": [838, 75],
+      "toKm": [918, 835],
+      "speedMps": 280,
+      "altitudeM": 8000
+    }
+  ],
+  "events": [
+    { "t": 5, "kind": "SENSOR_DEGRADED", "sensorId": "GIRAFFE-2" }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Continuous ballistic barrage",
+  "mode": "defense",
+  "durationMin": 75,
+  "continuousStreams": [
+    {
+      "everyMin": 5.0,
+      "idPrefix": "B-MER",
+      "class": "SRBM",
+      "fromKm": [1158, 385],
+      "toKm": [1225, 1208],
+      "targetAssetId": "meridia",
+      "speedMps": 1800,
+      "altitudeM": 30000,
+      "threatUnitCostUsd": 3000000,
+      "lateralSpreadKm": 3
+    },
+    {
+      "everyMin": 5.0,
+      "startMin": 2.5,
+      "idPrefix": "B-ELN",
+      "class": "SRBM",
+      "fromKm": [1165, 378],
+      "toKm": [1080, 1130],
+      "targetAssetId": "elnova-nuclear",
+      "speedMps": 1800,
+      "altitudeM": 30000,
+      "threatUnitCostUsd": 3000000,
+      "lateralSpreadKm": 3
+    },
+    {
+      "everyMin": 5.0,
+      "startMin": 5.0,
+      "idPrefix": "B-SPR",
+      "class": "SRBM",
+      "fromKm": [845, 82],
+      "toKm": [918, 835],
+      "targetAssetId": "spear-point",
+      "speedMps": 1800,
+      "altitudeM": 30000,
+      "threatUnitCostUsd": 3000000,
+      "lateralSpreadKm": 3
+    }
+  ],
+  "events": []
+}

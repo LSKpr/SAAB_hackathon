@@ -1,0 +1,20 @@
+{
+  "weapons": {
+    "SAM_LR": { "costPerShotUsd": 4000000, "rangeKm": 150, "magazineMax": 4,    "reloadMin": 4    },
+    "SAM_MR": { "costPerShotUsd": 1000000, "rangeKm": 60,  "magazineMax": 8,    "reloadMin": 2    },
+    "SAM_SR": { "costPerShotUsd": 200000,  "rangeKm": 25,  "magazineMax": 12,   "reloadMin": 1    },
+    "AAA":    { "costPerShotUsd": 5000,    "rangeKm": 8,   "magazineMax": 200,  "reloadMin": 0.05 },
+    "LASER":  { "costPerShotUsd": 100,     "rangeKm": 15,  "magazineMax": 9999, "reloadMin": 0.1  },
+    "FIGHTER_CAP": { "costPerShotUsd": 220000, "rangeKm": 45, "magazineMax": 6, "reloadMin": 1.1 }
+  },
+  "threats": {
+    "DRONE":              { "unitCostUsd": 30000,    "damageMult": 1.0 },
+    "LOITERING_MUNITION": { "unitCostUsd": 50000,    "damageMult": 1.0 },
+    "CM_SUBSONIC":        { "unitCostUsd": 1000000,  "damageMult": 1.0 },
+    "CM_SUPERSONIC":      { "unitCostUsd": 4000000,  "damageMult": 1.2 },
+    "SRBM":               { "unitCostUsd": 3000000,  "damageMult": 1.5 },
+    "GLIDE_BOMB":         { "unitCostUsd": 50000,    "damageMult": 0.8 },
+    "FIGHTER_4GEN":       { "unitCostUsd": 0,        "damageMult": 1.0 },
+    "BOMBER":             { "unitCostUsd": 0,        "damageMult": 1.0 }
+  }
+}

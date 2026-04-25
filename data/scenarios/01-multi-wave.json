@@ -1,0 +1,84 @@
+{
+  "name": "Continuous multi-axis air pressure",
+  "mode": "defense",
+  "durationMin": 90,
+  "continuousStreams": [
+    {
+      "everyMin": 2.8,
+      "idPrefix": "E-SOL",
+      "class": "DRONE",
+      "fromKm": [1158, 385],
+      "toKm": [577, 1237],
+      "targetAssetId": "solano",
+      "speedMps": 38,
+      "altitudeM": 260,
+      "threatUnitCostUsd": 30000,
+      "lateralSpreadKm": 8
+    },
+    {
+      "everyMin": 2.4,
+      "idPrefix": "E-CM",
+      "class": "CM_SUBSONIC",
+      "fromKm": [1158, 385],
+      "toKm": [1398, 1072],
+      "targetAssetId": "firewatch",
+      "speedMps": 240,
+      "altitudeM": 80,
+      "threatUnitCostUsd": 1000000,
+      "lateralSpreadKm": 5
+    },
+    {
+      "everyMin": 3.2,
+      "startMin": 1.0,
+      "idPrefix": "CM-VAL",
+      "class": "CM_SUBSONIC",
+      "fromKm": [1158, 385],
+      "toKm": [1500, 1100],
+      "targetAssetId": "valport",
+      "speedMps": 240,
+      "altitudeM": 80,
+      "threatUnitCostUsd": 1000000,
+      "lateralSpreadKm": 5
+    },
+    {
+      "everyMin": 2.8,
+      "startMin": 0.5,
+      "idPrefix": "LM-COM",
+      "class": "LOITERING_MUNITION",
+      "fromKm": [1158, 385],
+      "toKm": [700, 1050],
+      "targetAssetId": "comms-tower-mid",
+      "speedMps": 52,
+      "altitudeM": 200,
+      "threatUnitCostUsd": 50000,
+      "lateralSpreadKm": 6
+    },
+    {
+      "everyMin": 7.0,
+      "startMin": 2.0,
+      "idPrefix": "GB-SP",
+      "class": "GLIDE_BOMB",
+      "fromKm": [838, 75],
+      "toKm": [918, 835],
+      "targetAssetId": "spear-point",
+      "speedMps": 280,
+      "altitudeM": 12000,
+      "threatUnitCostUsd": 50000,
+      "lateralSpreadKm": 4
+    },
+    {
+      "everyMin": 10.0,
+      "startMin": 4.0,
+      "idPrefix": "SRBM-MER",
+      "class": "SRBM",
+      "fromKm": [1158, 385],
+      "toKm": [1225, 1208],
+      "targetAssetId": "meridia",
+      "speedMps": 1800,
+      "altitudeM": 30000,
+      "threatUnitCostUsd": 3000000,
+      "lateralSpreadKm": 3
+    }
+  ],
+  "events": []
+}

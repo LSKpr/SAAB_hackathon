@@ -1,0 +1,33 @@
+{
+  "name": "Continuous drone flood toward Solano",
+  "mode": "defense",
+  "durationMin": 75,
+  "continuousStreams": [
+    {
+      "everyMin": 2.6,
+      "idPrefix": "S-ROT",
+      "class": "DRONE",
+      "fromKm": [1158, 385],
+      "toKm": [577, 1237],
+      "targetAssetId": "solano",
+      "speedMps": 38,
+      "altitudeM": 260,
+      "threatUnitCostUsd": 30000,
+      "lateralSpreadKm": 10
+    },
+    {
+      "everyMin": 4.0,
+      "startMin": 0.5,
+      "idPrefix": "LM",
+      "class": "LOITERING_MUNITION",
+      "fromKm": [838, 75],
+      "toKm": [577, 1237],
+      "targetAssetId": "solano",
+      "speedMps": 52,
+      "altitudeM": 210,
+      "threatUnitCostUsd": 50000,
+      "lateralSpreadKm": 7
+    }
+  ],
+  "events": []
+}

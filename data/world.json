@@ -1,0 +1,83 @@
+{
+  "infrastructure": [
+    { "id": "northern-vanguard-base", "name": "Northern Vanguard Base", "type": "military_airport", "size": "M",  "posKm": [198.3, 335],   "damageOnHitUsd": 180000000 },
+    { "id": "highridge-command",      "name": "Highridge Command",      "type": "military_airport", "size": "L",  "posKm": [838.3, 75],    "damageOnHitUsd": 220000000 },
+    { "id": "boreal-watch-post",      "name": "Boreal Watch Post",      "type": "military_airport", "size": "M",  "posKm": [1158.3, 385],  "damageOnHitUsd": 200000000 },
+    { "id": "arktholm",               "name": "Arktholm",               "type": "capital",          "size": "XL", "posKm": [418.3, 95],    "damageOnHitUsd": 500000000 },
+    { "id": "valbrek",                "name": "Valbrek",                "type": "major_city",       "size": "L",  "posKm": [1423.3, 213.3], "damageOnHitUsd": 200000000 },
+    { "id": "nordvik",                "name": "Nordvik",                "type": "major_city",       "size": "L",  "posKm": [140, 323.3],   "damageOnHitUsd": 180000000 },
+    { "id": "meridia",          "name": "Meridia",          "type": "capital",          "size": "XL", "posKm": [1225, 1208], "damageOnHitUsd": 500000000 },
+    { "id": "callhaven",        "name": "Callhaven",        "type": "major_city",       "size": "L",  "posKm": [97, 1150],   "damageOnHitUsd": 200000000 },
+    { "id": "solano",           "name": "Solano",           "type": "small_town",       "size": "M",  "posKm": [577, 1237],  "damageOnHitUsd": 8000000   },
+    { "id": "firewatch",        "name": "Firewatch Station","type": "military_airport", "size": "L",  "posKm": [1398, 1072], "damageOnHitUsd": 250000000 },
+    { "id": "southern-redoubt", "name": "Southern Redoubt", "type": "military_airport", "size": "M",  "posKm": [322, 1238],  "damageOnHitUsd": 180000000 },
+    { "id": "spear-point",      "name": "Spear Point",      "type": "military_airport", "size": "M",  "posKm": [918, 835],   "damageOnHitUsd": 180000000 },
+    { "id": "haldfeld-civ",     "name": "Haldfeld Civic",   "type": "civilian_airport", "size": "M",  "posKm": [800, 1200],  "damageOnHitUsd": 80000000  },
+    { "id": "torsby-power",     "name": "Torsby Power",     "type": "power_plant",      "size": "M",  "posKm": [950, 1180],  "damageOnHitUsd": 220000000 },
+    { "id": "elnova-nuclear",   "name": "Elnova Nuclear",   "type": "nuclear_plant",    "size": "L",  "posKm": [1080, 1130], "damageOnHitUsd": 600000000 },
+    { "id": "havsala-refinery", "name": "Havsala Refinery", "type": "refinery",         "size": "M",  "posKm": [200, 1100],  "damageOnHitUsd": 90000000  },
+    { "id": "valport",          "name": "Valport",          "type": "port",             "size": "L",  "posKm": [1500, 1100], "damageOnHitUsd": 70000000  },
+    { "id": "comms-tower-mid",  "name": "Comms Tower Mid",  "type": "comms_tower",      "size": "S",  "posKm": [700, 1050],  "damageOnHitUsd": 5000000   },
+    { "id": "field-east",       "name": "East Plain",       "type": "empty_field",      "size": "S",  "posKm": [1300, 950],  "damageOnHitUsd": 50000     }
+  ],
+  "stations": [
+    { "id": "stn-meridia-lr",       "name": "Meridia LR",      "weapon": "SAM_LR", "posKm": [1225, 1180], "rangeKm": 150, "magazineMax": 4,    "magazine": 4,    "reloadMin": 4,    "costPerShotUsd": 4000000 },
+    { "id": "stn-spearpoint-lr",    "name": "Spear Point LR",  "weapon": "SAM_LR", "posKm": [918, 835],   "rangeKm": 150, "magazineMax": 4,    "magazine": 4,    "reloadMin": 4,    "costPerShotUsd": 4000000 },
+    { "id": "stn-firewatch-mr",     "name": "Firewatch MR",    "weapon": "SAM_MR", "posKm": [1398, 1072], "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-callhaven-mr",     "name": "Callhaven MR",    "weapon": "SAM_MR", "posKm": [97, 1150],   "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-redoubt-mr",       "name": "Redoubt MR",      "weapon": "SAM_MR", "posKm": [322, 1238],  "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-meridia-sr",       "name": "Meridia SR",      "weapon": "SAM_SR", "posKm": [1235, 1198], "rangeKm": 25,  "magazineMax": 12,   "magazine": 12,   "reloadMin": 1,    "costPerShotUsd": 200000  },
+    { "id": "stn-borealwatch-lr",   "name": "Boreal Watch LR", "side": "north", "weapon": "SAM_LR", "posKm": [1155, 368],  "rangeKm": 150, "magazineMax": 4,    "magazine": 4,    "reloadMin": 4,    "costPerShotUsd": 4000000 },
+    { "id": "stn-highridge-lr",     "name": "Highridge LR",    "side": "north", "weapon": "SAM_LR", "posKm": [838, 95],    "rangeKm": 150, "magazineMax": 4,    "magazine": 4,    "reloadMin": 4,    "costPerShotUsd": 4000000 },
+    { "id": "stn-vanguard-mr",      "name": "Vanguard MR",     "side": "north", "weapon": "SAM_MR", "posKm": [205, 332],   "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-borealwatch-mr",   "name": "Boreal Watch MR", "side": "north", "weapon": "SAM_MR", "posKm": [1172, 382],  "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-highridge-mr",     "name": "Highridge MR",    "side": "north", "weapon": "SAM_MR", "posKm": [855, 68],    "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-arktholm-mr",      "name": "Arktholm MR",     "side": "north", "weapon": "SAM_MR", "posKm": [432, 92],    "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-valbrek-mr",       "name": "Valbrek MR",      "side": "north", "weapon": "SAM_MR", "posKm": [1410, 220],  "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-nordvik-mr",       "name": "Nordvik MR",      "side": "north", "weapon": "SAM_MR", "posKm": [155, 318],   "rangeKm": 60,  "magazineMax": 8,    "magazine": 8,    "reloadMin": 2,    "costPerShotUsd": 1000000 },
+    { "id": "stn-vanguard-sr",      "name": "Vanguard SR",     "side": "north", "weapon": "SAM_SR", "posKm": [190, 338],   "rangeKm": 25,  "magazineMax": 12,   "magazine": 12,   "reloadMin": 1,    "costPerShotUsd": 200000  },
+    { "id": "stn-borealwatch-sr",   "name": "Boreal Watch SR", "side": "north", "weapon": "SAM_SR", "posKm": [1145, 392],  "rangeKm": 25,  "magazineMax": 12,   "magazine": 12,   "reloadMin": 1,    "costPerShotUsd": 200000  },
+    { "id": "stn-arktholm-sr",      "name": "Arktholm SR",     "side": "north", "weapon": "SAM_SR", "posKm": [405, 100],   "rangeKm": 25,  "magazineMax": 12,   "magazine": 12,   "reloadMin": 1,    "costPerShotUsd": 200000  },
+    { "id": "stn-valbrek-sr",       "name": "Valbrek SR",      "side": "north", "weapon": "SAM_SR", "posKm": [1435, 206],  "rangeKm": 25,  "magazineMax": 12,   "magazine": 12,   "reloadMin": 1,    "costPerShotUsd": 200000  },
+    { "id": "stn-nordvik-sr",       "name": "Nordvik SR",      "side": "north", "weapon": "SAM_SR", "posKm": [128, 328],   "rangeKm": 25,  "magazineMax": 12,   "magazine": 12,   "reloadMin": 1,    "costPerShotUsd": 200000  },
+    { "id": "stn-borealwatch-aaa",  "name": "Boreal Watch AAA","side": "north", "weapon": "AAA",    "posKm": [1168, 398],  "rangeKm": 8,   "magazineMax": 200,  "magazine": 200,  "reloadMin": 0.05, "costPerShotUsd": 5000    },
+    { "id": "stn-arktholm-laser",   "name": "Arktholm LASER",  "side": "north", "weapon": "LASER",  "posKm": [418, 108],   "rangeKm": 15,  "magazineMax": 9999, "magazine": 9999, "reloadMin": 0.1,  "costPerShotUsd": 100     },
+    { "id": "stn-elnova-sr",        "name": "Elnova SR",       "weapon": "SAM_SR", "posKm": [1080, 1130], "rangeKm": 25,  "magazineMax": 12,   "magazine": 12,   "reloadMin": 1,    "costPerShotUsd": 200000  },
+    { "id": "stn-solano-aaa",       "name": "Solano AAA",      "weapon": "AAA",    "posKm": [577, 1237],  "rangeKm": 8,   "magazineMax": 200,  "magazine": 200,  "reloadMin": 0.05, "costPerShotUsd": 5000    },
+    { "id": "stn-firewatch-aaa",    "name": "Firewatch AAA",   "weapon": "AAA",    "posKm": [1410, 1072], "rangeKm": 8,   "magazineMax": 200,  "magazine": 200,  "reloadMin": 0.05, "costPerShotUsd": 5000    },
+    { "id": "stn-meridia-laser",    "name": "Meridia LASER",   "weapon": "LASER",  "posKm": [1215, 1198], "rangeKm": 15,  "magazineMax": 9999, "magazine": 9999, "reloadMin": 0.1,  "costPerShotUsd": 100     },
+    { "id": "stn-spearpoint-laser", "name": "Spear Point LASER","weapon":"LASER",  "posKm": [925, 835],   "rangeKm": 15,  "magazineMax": 9999, "magazine": 9999, "reloadMin": 0.1,  "costPerShotUsd": 100     },
+    {
+      "id": "cap-raven-1",
+      "name": "CAP Raven 1",
+      "weapon": "FIGHTER_CAP",
+      "posKm": [920, 720],
+      "rangeKm": 45,
+      "magazineMax": 6,
+      "magazine": 6,
+      "reloadMin": 1.1,
+      "costPerShotUsd": 220000,
+      "mobilePatrol": {
+        "centerKm": [800, 720],
+        "radiusKm": 140,
+        "omegaRadPerMin": 0.09
+      }
+    },
+    {
+      "id": "cap-raven-2",
+      "name": "CAP Raven 2",
+      "weapon": "FIGHTER_CAP",
+      "posKm": [1180, 980],
+      "rangeKm": 42,
+      "magazineMax": 6,
+      "magazine": 6,
+      "reloadMin": 1.1,
+      "costPerShotUsd": 220000,
+      "mobilePatrol": {
+        "centerKm": [1280, 920],
+        "radiusKm": 110,
+        "omegaRadPerMin": -0.11
+      }
+    }
+  ]
+}
