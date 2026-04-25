@@ -12,11 +12,11 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "./lib/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
+    "dev": "tsc && node target/index.js",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prepublish": "npm run build"
   },

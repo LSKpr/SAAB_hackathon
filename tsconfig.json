@@ -1,14 +1,10 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "commonjs",
-		"moduleResolution": "node",
-		"lib": [
-			"es2015"
-		],
-
+		"target": "esnext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"rootDir": "src",
-		"outDir": "lib",
+		"outDir": "target",
 
 		"strict": true,
 		"alwaysStrict": true,
@@ -26,7 +22,6 @@
 
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"downlevelIteration": true,
 		"declaration": true,
 
 		"pretty": true
