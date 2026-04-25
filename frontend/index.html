@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARES-Next Decision Console</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ARES-Next</p>
+        <h1>Regret-Aware Defense Planning</h1>
+      </div>
+      <div class="status-strip" aria-label="system status">
+        <span class="status-dot"></span>
+        <span>Decision support only</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="panel scenario-panel" aria-labelledby="scenario-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Live scenario</p>
+            <h2 id="scenario-title">Current Wave</h2>
+          </div>
+          <button id="resetScenario" class="ghost-button" type="button">Reset</button>
+        </div>
+
+        <div class="control-grid">
+          <label>
+            Threat type
+            <select id="threatKind">
+              <option value="drone">Drone swarm</option>
+              <option value="cruise-missile">Cruise missiles</option>
+              <option value="ballistic-missile">Ballistic missiles</option>
+              <option value="jammer">Jamming aircraft</option>
+            </select>
+          </label>
+          <label>
+            Target
+            <select id="targetId">
+              <option value="asset-a">Command node Alpha</option>
+              <option value="asset-b">Power grid cluster Bravo</option>
+              <option value="asset-c">Logistics hub Charlie</option>
+            </select>
+          </label>
+          <label>
+            Sector
+            <select id="sector">
+              <option value="north">North</option>
+              <option value="east">East</option>
+              <option value="south">South</option>
+              <option value="west">West</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="slider-row">
+          <label for="count">Threat count <strong id="countValue">20</strong></label>
+          <input id="count" type="range" min="4" max="48" step="1" value="20">
+        </div>
+        <div class="slider-row">
+          <label for="sophistication">Attack sophistication <strong id="sophisticationValue">68%</strong></label>
+          <input id="sophistication" type="range" min="10" max="95" step="1" value="68">
+        </div>
+      </section>
+
+
+
+      <section class="panel attack-map-panel" aria-labelledby="attack-map-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Attack simulation</p>
+            <h2 id="attack-map-title">Live Attack Map</h2>
+          </div>
+          <div class="sim-clock" id="simClock">T+00s</div>
+        </div>
+        <div class="map-frame">
+          <canvas id="attackCanvas" width="1000" height="780" aria-label="Simulated Boreal Passage attack map"></canvas>
+          <div class="map-legend">
+            <span><i class="legend-asset"></i> Protected asset</span>
+            <span><i class="legend-threat"></i> Active threat</span>
+            <span><i class="legend-defense"></i> Defense coverage</span>
+            <span><i class="legend-intercept"></i> Intercept / track</span>
+          </div>
+        </div>
+        <div class="simulation-actions">
+          <button id="startSimulation" class="primary-button" type="button">Start simulation</button>
+          <button id="stepSimulation" class="ghost-button" type="button">Step</button>
+          <button id="pauseSimulation" class="ghost-button" type="button">Pause</button>
+          <button id="resetSimulation" class="ghost-button" type="button">Reset sim</button>
+        </div>
+        <div class="timeline" id="simulationTimeline" aria-live="polite"></div>
+      </section>
+
+
+      <section class="panel decision-panel" aria-labelledby="decision-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Human authority</p>
+            <h2 id="decision-title">Final Decision</h2>
+          </div>
+          <div id="decisionState" class="decision-state pending">Pending</div>
+        </div>
+
+        <div class="score-grid">
+          <div>
+            <span>Current reduction</span>
+            <strong id="metricReduction">0%</strong>
+          </div>
+          <div>
+            <span>Future flexibility</span>
+            <strong id="metricFlexibility">0%</strong>
+          </div>
+          <div>
+            <span>Regret index</span>
+            <strong id="metricRegret">0</strong>
+          </div>
+          <div>
+            <span>Overcommitment</span>
+            <strong id="metricOvercommitment">0</strong>
+          </div>
+        </div>
+
+        <div class="recommendation-copy" id="recommendationCopy"></div>
+        <label class="commander-note">
+          Commander note
+          <textarea id="commanderNote" rows="4" placeholder="Record operational reasoning before approving or rejecting."></textarea>
+        </label>
+        <div class="decision-actions">
+          <button id="approveDecision" class="primary-button" type="button">Approve posture</button>
+          <button id="rejectDecision" class="danger-button" type="button">Reject recommendation</button>
+        </div>
+        <div class="decision-log" id="decisionLog" aria-live="polite"></div>
+      </section>
+
+      <section class="panel map-panel" aria-labelledby="map-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Future Regret Engine</p>
+            <h2 id="map-title">Regret Map</h2>
+          </div>
+          <div id="recommendationBadge" class="recommendation-badge">Flexible Hold</div>
+        </div>
+        <div class="regret-table" id="regretMap"></div>
+      </section>
+
+      <section class="panel belief-panel" aria-labelledby="belief-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Adversary attack grammar</p>
+            <h2 id="belief-title">Intent Belief</h2>
+          </div>
+        </div>
+        <div id="beliefBars" class="belief-bars"></div>
+      </section>
+
+      <section class="panel posture-panel" aria-labelledby="posture-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Commander-adjustable</p>
+            <h2 id="posture-title">Candidate Postures</h2>
+          </div>
+        </div>
+        <div id="postureCards" class="posture-cards"></div>
+      </section>
+
+      <section class="panel resource-panel" aria-labelledby="resource-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Manual allocation</p>
+            <h2 id="resource-title">Resource Mix</h2>
+          </div>
+          <button id="applyRecommended" class="ghost-button" type="button">Use recommended mix</button>
+        </div>
+        <div id="countermeasureStatus" class="countermeasure-status">No active countermeasures</div>
+        <div id="resourceControls" class="resource-controls"></div>
+      </section>
+
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

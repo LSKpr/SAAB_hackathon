@@ -18,7 +18,8 @@
     "build": "tsc",
     "dev": "tsc && node target/index.js",
     "lint": "tslint -c tslint.json src/**/*.ts",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "web": "node scripts/serve-frontend.cjs"
   },
   "dependencies": {
     "tslint": "^5.20.1",
